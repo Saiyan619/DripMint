@@ -10,12 +10,12 @@
   
     .main_name_text_container {
       z-index: 5;
-      display: flex;
+      // display: flex;
       gap: 2px;  
       overflow: hidden; 
     //   border: 1px solid black;
       padding: 0 10px; 
-      height: 80vh;
+      height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,12 +28,12 @@
         display: flex; 
         align-items: center;
         justify-content: center;
+        flex-direction: row;
 
         @media screen and (max-width: 640px) {
           height: 40px; 
         }
-      
-  
+    
         .main_name_text_1 {
           position: relative;
           font-family: "Ethnocentric";
@@ -46,5 +46,26 @@
           }
         }
       }
+    }
+  }
+
+  .sub_text_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -140px;
+    font-family: "good_times";
+    text-align: center;
+
+    .header_btn{
+      background-color: black;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 100px;
+      outline: none;
+      border: none;
+      font-family: "good_times";
+      margin-top: 10px;
     }
   }
