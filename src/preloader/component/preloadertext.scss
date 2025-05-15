@@ -1,0 +1,38 @@
+.preloader_text_container{
+    font-size: 25px;
+    font-family: "good_times";
+
+    @media screen and (max-width: 640px) {
+        font-size: 15px; 
+    }
+}
+
+.preloader_text_1_container{
+    position: relative;
+    overflow: hidden;
+    // border: 1px solid white;
+    height: 40px;
+    width: 450px;
+
+    @media screen and (max-width: 640px) {
+        height: 20px;
+        width: 450px;
+    }
+
+    .preloader_text_1{
+        position: absolute;
+        @media screen and (max-width: 640px) {
+
+        }
+    }
+}.preloader_text_2_container{
+    position: relative;
+    overflow: hidden;
+    // border: 1px solid white;
+    height: 40px;
+    width: 490px;
+
+    .preloader_text_2{
+        position: absolute;
+    }
+}

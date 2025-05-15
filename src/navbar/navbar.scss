@@ -1,0 +1,150 @@
+/* 
+Since we're using Framer Motion for the list animations,
+we only need minimal additions to your existing CSS
+*/
+
+/* Positioning for hamburger menu */
+.hamburger-menu {
+    z-index: 10;
+    position: relative;
+}
+
+
+// Your existing CSS remains unchanged:
+
+.navbar_container{
+    position: relative;
+    padding: 10px;
+    z-index: 8;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+    .nav_title_text{
+        font-size: 15px;
+        font-family: "Ethnocentric";
+    }
+}
+
+
+.sidebar_container_active{
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    transition: all 1s cubic-bezier(0.9, 0.05, 0.8, 0.1);
+    overflow: hidden;
+
+    @media screen and (max-width: 640px) {
+        width: 70vw;
+        }
+
+    ul {
+        padding: 20px;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        li {
+          position: relative; // Required for the pseudo-element
+          list-style: none;
+          font-size: 30px;
+          font-family: "good_times";
+          cursor: pointer;
+          font-weight: bold;
+          color: black;
+
+          @media screen and (max-width: 640px) {
+            font-size: 15px;
+            }
+  
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px; // adjust spacing under text
+            width: 0%;
+            height: 2px;
+            background-color: black;
+            transition: width 0.4s ease-in-out;
+          }
+  
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+}
+
+.sidebar_container_inactive{
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 50vw;
+    height: 0vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    transition: all 1s cubic-bezier(0.6, 0.05, 0.8, 0.3);
+    overflow: hidden;
+
+    
+    @media screen and (max-width: 640px) {
+        width: 70vw;
+        }
+
+
+    ul{
+        padding: 20px;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+        li{
+            list-style: none;
+            font-size: 30px;
+            font-family: "good_times";
+            cursor: pointer;
+            font-weight: bold;
+
+                    @media screen and (max-width: 640px) {
+                    font-size: 15px;
+                    }
+        }
+
+    }
+
+    
+}
+
+
+.my_nav_info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+    span{
+        cursor: pointer;
+        font-family: "good_times";
+        font-size: 10px;
+
+        
+    @media screen and (max-width: 640px) {
+        font-size: 7px;
+        }
+
+    }
+}
