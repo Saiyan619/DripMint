@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './navbar.scss';
 import { Spiral as Hamburger } from 'hamburger-react';
 import { motion } from 'framer-motion';
+import { useGlobalContext } from '../utils/globalContext';
 
 const Navbar = () => {
-    // State for hamburger menu
+  const { preloaderDone } = useGlobalContext();
     const [isOpen, setOpen] = useState(false);
     // State to control when animations should start (after sidebar opens)
     const [animateItems, setAnimateItems] = useState(false);
@@ -63,9 +64,13 @@ const Navbar = () => {
     return (
         <div className="navbar_container">
             <nav>
-                <div className="nav_title_text">
+          <motion.div
+            initial={{ y: "100%", opacity: 0 }}
+            animate={preloaderDone ? { y: "0%", opacity: 1 } : { y: "-100%", opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="nav_title_text">
                     DripMint
-                </div>
+                </motion.div>
                 
                 <div className="hamburger-menu">
                     <Hamburger toggled={isOpen} toggle={setOpen} />
@@ -82,16 +87,16 @@ const Navbar = () => {
                         Home
                     </motion.li>
                     <motion.li variants={listItemVariants}>
-                        How it works
+                        How It Works
                     </motion.li>
                     <motion.li variants={listItemVariants}>
-                        How it works
+                        Features
                     </motion.li>
                     <motion.li variants={listItemVariants}>
-                        How it works
+                       FAQs
                     </motion.li>
                     <motion.li variants={listItemVariants}>
-                        How it works
+                        Whitelist
                     </motion.li>
                 </motion.ul>
 
