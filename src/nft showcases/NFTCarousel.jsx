@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import './nftcarousel.scss'
+import './nftCarousel.scss'
 
 const NFTCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
