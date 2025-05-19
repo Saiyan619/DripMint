@@ -16,6 +16,9 @@
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @media screen and (max-width: 640px) {
+            font-size: 1.5rem;
+          }
         }
         
         p {
