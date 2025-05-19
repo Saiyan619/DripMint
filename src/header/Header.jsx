@@ -24,9 +24,6 @@ const Header = () => {
             </motion.div>
           </span>
         ))}
-        
- 
-        
         </div>
         <div className='sub_text_container'>
           <span>Mint. Own. Earn <br /> Welcome to the world of Drippy art</span>
