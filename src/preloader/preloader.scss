@@ -1,11 +1,15 @@
 .preloader{
-    position: absolute;
-    z-index: 100;
+    position: fixed; /* Changed from absolute to fixed */
+    z-index: 9999; /* Higher z-index to ensure it's on top */
     background-color: black;
     width: 100vw;
     height: 100vh;
     color: white;
     overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
     @media screen and (max-width: 640px) {
         width: 100vw;
