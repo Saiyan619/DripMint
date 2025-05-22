@@ -9,7 +9,6 @@ const SectionOne = () => {
     const isInView = useInView(ref, { once: false, amount: 0.8 });
   return (
     <div className='section_one_container'>
-
 <div className="text-mask-container">
   <div ref={ref} className="text-mask-wrapper">
       <motion.h1 
