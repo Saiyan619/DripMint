@@ -31,10 +31,10 @@ const Community = () => {
           <img src="./pngwing.com (4).png" alt="social icon" />
         </div>
         <div className='img_container'>
-          <img src="./pngwing.com (4).png" alt="social icon" />
+          <img src="./pngwing.com (5).png" alt="social icon" />
         </div>
         <div className='img_container'>
-          <img src="./pngwing.com (4).png" alt="social icon" />
+          <img src="./pngwing.com (6).png" alt="social icon" />
         </div>
       </div>
     </div>
