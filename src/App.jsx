@@ -9,6 +9,8 @@ import NFTCarousel from './nft showcases/NFTCarousel';
 import Showcase from './nft showcases/Showcase';
 import Community from './community/Community';
 import { useEffect } from 'react';
+import FAQ from './faqs/Faqs';
+import Footer from './footer/Footer';
 
 
 function App() {
@@ -43,6 +45,8 @@ function App() {
             <SectionOne />
             <Showcase />
             <Community />
+            <FAQ />
+            <Footer />
       </div>
       </div>
       </AnimatePresence>
