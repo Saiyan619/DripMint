@@ -7,8 +7,8 @@ const Footer = () => {
   const letters = ["D", "R", "I", "P", "M", "I", "N", "T"];
   return (
     <div className='footer_container'>
-      <button className='buy_button'>START MINTING</button>
-        <div ref={ref} className='footer_text_wrapper'>
+          <a href="https://nft-minter-frontend.vercel.app/" className='buy_button'>Start Minting</a>
+          <div ref={ref} className='footer_text_wrapper'>
       {letters.map((letter, index) => {
         return (
           <motion.div
