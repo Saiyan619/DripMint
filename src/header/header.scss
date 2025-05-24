@@ -47,14 +47,34 @@
       width: auto;
     }
     .header_btn{
-      background-color: black;
-      padding: 10px 20px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      margin-top: 5px;
       color: white;
-      border-radius: 100px;
-      outline: none;
+      font-size: 11px;
       border: none;
+      padding: 7px 15px;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
       font-family: "good_times";
-      margin-top: 10px;
+      .buy_button::before {
+          filter: blur(100px);
+          opacity: 1;
+      }
+
+      &:hover {
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        transform: translateY(-2px);
+      }
+      
+      &:active {
+        transform: translateY(0);
+      }
     }
   }
 

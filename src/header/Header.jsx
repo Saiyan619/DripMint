@@ -25,7 +25,7 @@ const Header = () => {
 
             <div className='sub_text_container'>
           <span>Mint. Own. Earn <br /> Welcome to the world of Drippy art</span>
-          <button className='header_btn'>Start Minting</button>
+          <a href="https://nft-minter-frontend.vercel.app/" className='header_btn'>Start Minting</a>
         </div>
         </div>
       
