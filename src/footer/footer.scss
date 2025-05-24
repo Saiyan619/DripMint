@@ -1,5 +1,5 @@
 .footer_container{
-    height: 50vh;
+    height: 40vh;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -19,14 +19,16 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
         font-family: "good_times";
+        margin-bottom: 20px;
         .buy_button::before {
-            filter: blur(0px);
-            opacity: 0;
+            filter: blur(100px);
+            opacity: 1;
         }
 
         &:hover {
           background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
           box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+          transform: translateY(-2px);
         }
         
         &:active {
@@ -48,7 +50,7 @@
             h3{
                 font-size: 100px;
                 @media screen and (max-width: 640px) {
-                    font-size: 45px;
+                    font-size: 50px;
                 }
             }
         }

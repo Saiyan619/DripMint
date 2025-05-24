@@ -5,51 +5,30 @@
     background-color: greenyellow;
     height: 100vh;
     width: 100vw;
+   
     @media screen and (max-width: 640px) {
       overflow: hidden;
     }
-  
-    .main_name_text_container {
-      // display: flex;
-      gap: 2px;  
-      overflow: hidden; 
-    //   border: 1px solid black;
-      padding: 30px 10px; 
-      height: 50vh;
+  }
+
+  .main_name_text_container{
     display: flex;
-    justify-content: center;
     align-items: center;
-    @media screen and (max-width: 640px) {
-      gap: 0px;  
-    }
-  
-      .letter_wrapper {
-        z-index: 30;
-        position: relative;
-        width: auto; // Changed from 100% to auto to fit the content
-        height: 100px;
-        overflow: hidden;
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+  }
 
-        @media screen and (max-width: 640px) {
-          height: 40px; 
+  .letter_wrapper{
+    display: flex;
+    z-index: 100;
+    overflow: hidden;
+    span{
+      font-size: 90px;
+      font-family: "Ethnocentric";
+            @media screen and (max-width: 640px) {
+              font-size: 35px;
         }
-    
-        .main_name_text_1 {
-          position: relative;
-          font-family: "Ethnocentric";
-          font-size: 6rem;
-          display: block; 
-          line-height: 1; 
-
-          @media screen and (max-width: 640px) {
-            font-size: 2rem;
-          }
-        }
-      }
     }
   }
 
@@ -60,11 +39,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: -120px;
     font-family: "good_times";
     text-align: center;
     @media screen and (max-width: 640px) {
-      margin-top: -150px;
+      margin-top: 0px;
       font-size: 12px;
       width: auto;
     }

@@ -1,34 +1,34 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { delay, motion } from 'framer-motion'
 import './header.scss'
 import { useGlobalContext } from '../utils/globalContext';
 import Navbar from '../navbar/Navbar';
 
 const Header = () => {
     const { preloaderDone, setPreloaderDone } = useGlobalContext();
-  
+  const letters = ["D", "R", "I", "P", "M", "I", "N", "T"];
   return (
     <div className='header_container'>
     <div className='header'>
                   <Navbar />
-      <div className='main_name_text_container'>
-        {["D", "R", "I", "P", "M", "I", "N", "T"].map((letter, index) => (
-          <span key={index} className='letter_wrapper'>
-            <motion.div
-              className='main_name_text_1'
-              initial={{ y: "120%" }}
-              animate={{ y: preloaderDone ? "0" : "120%" }}
-              transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
-            >
-              {letter}
-            </motion.div>
-          </span>
-        ))}
-        </div>
-        <div className='sub_text_container'>
+
+        <div className='main_name_text_container'>
+          <div className='letter_wrapper'>
+          {letters.map((letter, index) => {
+            return (
+              <motion.div initial={{ y:"200"}} animate={{ y: preloaderDone ? "0" : "200%" }} transition={{delay:.1+index*0.05,type:"tween", duration:1}} key={index}>
+                <span>{letter}</span>
+              </motion.div>
+            )
+          })}
+            </div>
+
+            <div className='sub_text_container'>
           <span>Mint. Own. Earn <br /> Welcome to the world of Drippy art</span>
           <button className='header_btn'>Start Minting</button>
         </div>
+        </div>
+      
     
       </div>
 
